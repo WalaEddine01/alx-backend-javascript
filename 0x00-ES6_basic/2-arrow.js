@@ -1,4 +1,4 @@
-export default function getNeighborhoodsList () {
+export default function GetNeighborhoodsList() {
   this.sanFranciscoNeighborhoods = ['SOMA', 'Union Square'];
 
   const self = this;
