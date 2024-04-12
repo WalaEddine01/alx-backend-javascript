@@ -1,3 +1,3 @@
-import appendToEachArrayValue from './10-loops.js';
+import createEmployeesObject from './11-createEmployeesObject.js';
 
-console.log(appendToEachArrayValue(['appended', 'fixed', 'displayed'], 'correctly-'));
+console.log(createEmployeesObject("Software", [ "Bob", "Sylvie" ]));
