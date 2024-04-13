@@ -4,7 +4,5 @@ export default function createReportObject(employeesList) {
 
     for (const employee of employeesList) {
         allEmployees[employee.departmentName] = employee.employees;
-
-
-    
+   
 }
