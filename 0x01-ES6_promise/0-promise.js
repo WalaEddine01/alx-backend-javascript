@@ -12,9 +12,8 @@ function isEvenNumber(num) {
     });
   }
   
-  isEvenNumber(10).then(result => {
-    console.log(result); // Outputs: Even
-  }).catch(error => {
-    console.log(error);
-  });
+  isEvenNumber("d").then(
+    (resolve) => console.log(resolve),
+    (reject) => console.log(reject)
+  );
   
