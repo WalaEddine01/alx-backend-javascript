@@ -1,6 +1,15 @@
-import getListStudents from "./0-get_list_students.js";
-import updateStudentGradeByCity from "./4-update_grade_by_city.js";
+import { queryAPI, weakMap } from "./100-weak.js";
 
-console.log(updateStudentGradeByCity(getListStudents(), "San Francisco", [{ studentId: 5, grade: 97 }, { studentId: 1, grade: 86 }]));
+const endpoint = { protocol: 'http', name: 'getUsers' };
+weakMap.get(endpoint);
 
-console.log(updateStudentGradeByCity(getListStudents(), "San Francisco", [{ studentId: 5, grade: 97 }]));
+queryAPI(endpoint);
+console.log(weakMap.get(endpoint));
+
+queryAPI(endpoint);
+console.log(weakMap.get(endpoint));
+
+queryAPI(endpoint);
+queryAPI(endpoint);
+queryAPI(endpoint);
+queryAPI(endpoint);
