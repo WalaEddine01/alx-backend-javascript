@@ -2,13 +2,13 @@ import Car from './10-car';
 
 export default class EVCar extends Car {
   constructor(brand, motor, color, range) {
-    if (typeof range === 'string') {
-      super(brand, motor, color);
+    super(brand, motor, color);
+    if (typeof _range === 'string') {
       this._range = range;
     }
   }
 
-  cloneCar(brand, motor, color) {
-    return new Car(brand, motor, color);
+  cloneCar() {
+    return new Car(this._brand, this._motor, this._color); // Used `this` to access attributes
   }
 }
