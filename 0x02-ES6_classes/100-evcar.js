@@ -8,7 +8,7 @@ export default class EVCar extends Car {
     }
   }
 
-  cloneCar() {
-    return new Car();
+  cloneCar(brand, motor, color){
+    return new Car(brand, motor, color);
   }
 }
