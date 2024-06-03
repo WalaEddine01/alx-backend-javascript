@@ -1,6 +1,12 @@
-const prompt = require('prompt-sync')();
+const readline = require('readline');
 
-console.log("Welcome to Holberton School, what is your name?");
-const input = prompt();
-console.log(`Your name is: ${input}`);
-console.log('This important software is now closing');
+const input = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
+
+console.log('Welcome to Holberton School, what is your name?');
+input.question('Enter your name: ', (name) => {
+  console.log(`Hello, ${name}!`);
+  input.close();
+});
