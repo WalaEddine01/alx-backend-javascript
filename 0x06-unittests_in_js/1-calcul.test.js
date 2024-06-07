@@ -1,5 +1,7 @@
 const { it } = require("mocha");
+const assert = require("assert");
 const calculateNumber = require("./1-calcul");
+
 describe("calculateNumber", function(){
     it("should return 4 when passed 1 and 3", function(){
         assert.equal(calculateNumber('SUM', 1, 3), 4)
