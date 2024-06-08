@@ -1,3 +1,7 @@
-const displayMessage = require('./0-console');
+console.log('Please enter some input: ');
 
-displayMessage("Hello NodeJS!");
+process.stdin.setEncoding('utf-8');
+process.stdin.on('data', (data) => {
+  console.log(`You entered: ${data.trim()}`);
+  process.stdin.end();
+});
