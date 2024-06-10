@@ -5,9 +5,8 @@ const input = readline.createInterface({
   output: process.stdout,
 });
 
-console.log('Welcome to Holberton School, what is your name?');
-input.question('', (name) => {
-  process.stdout.write(`Your name is: ${name}\r`);
+input.question('Welcome to Holberton School, what is your name?\n', (name) => {
+  console.log(`Your name is: ${name}\r`);
   process.stdin.on('end', () => {
     console.log('This important software is now closing');
     process.exit(0);
