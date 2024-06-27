@@ -1,4 +1,4 @@
-const express = require("express");
+import express from "express";
 
 const app = express();
 const port = 1245;
@@ -9,4 +9,4 @@ app.get('/', (request, response) => {
 app.listen(port, () => {
 });
 
-module.exports = app;
+export default app;
