@@ -1,7 +1,8 @@
-import express from "express";
+const express = require('express');
 
 const app = express();
 const port = 1245;
+
 app.get('/', (request, response) => {
   response.send('Hello Holberton School!');
 });
@@ -9,4 +10,4 @@ app.get('/', (request, response) => {
 app.listen(port, () => {
 });
 
-export default app;
+module.exports = app;
