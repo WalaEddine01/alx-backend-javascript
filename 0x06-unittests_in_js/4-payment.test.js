@@ -2,7 +2,6 @@ const sinon = require('sinon');
 const sendPaymentRequestToApi = require('./4-payment.js');
 const Utils = require('./utils.js');
 
-
 describe('sendPaymentRequestToApi', () => {
   it('should use Utils.calculateNumber', () => {
     const stub = sinon.stub(Utils, 'calculateNumber');
