@@ -1,6 +1,9 @@
-import get_students_by_loc from './2-get_students_by_loc';
-
-export default function updateStudentGradeByCity(...Objs) {
-  const a = get_students_by_loc(Objs);
-  console.log(a);
+export default function updateStudentGradeByCity(list, targetLocation, newGrades) {
+  return list
+    .filter(({ location }) => location === targetLocation)
+    .map((obj) => {
+      const xtargetNewGrade = newGrades.filter(({ studentId }) => studentId === obj.id);
+      const { grade = 'N/A' } = xtargetNewGrade.length > 0 ? xtargetNewGrade[0] : {};
+      return { ...obj, grade };
+    });
 }
